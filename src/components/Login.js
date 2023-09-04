@@ -12,7 +12,7 @@ const Login = () => {
         <div class="row">
           <div class="col-md-4 col-sm-12"></div>
           <div class="col my-5">
-            <div class="card">
+            <div class="card ">
               <div class="card-body custom-card-body">
                 <center>
                   <h5 class="card-title mb-5">User Login</h5>
@@ -49,7 +49,7 @@ const Login = () => {
                     
                 </form>
                 <div className="mb-3 d-flex align-items-center justify-content-between">
-                  <button type="submit" className="btn btn-primary me-2">
+                  <button type="button" className="btn m-2 button-3">
                     Submit
                   </button>
                   <div className="mb-3">

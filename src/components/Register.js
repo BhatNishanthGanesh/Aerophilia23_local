@@ -80,7 +80,7 @@ const Register = () => {
                     </div>
                   </form>
                   <div className="mb-3 d-flex align-items-center justify-content-between">
-                    <button type="submit" className="btn btn-primary me-2">
+                    <button type="button" className="btn m-2 button-3">
                       Submit
                     </button>
                     <div className="mb-3">

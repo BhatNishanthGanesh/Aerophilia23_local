@@ -179,6 +179,7 @@ const EventDetails = () => {
                       <BsFillClockFill class="event-icon"/> {event.details[2]}
                       
                       <br />
+                      <br />
                       {/* <BsFillTrophyFill/>
                       <br />
                       <BsFillCalendarCheckFill/>
@@ -230,8 +231,8 @@ const EventDetails = () => {
                     <h2>JUDGING CRITERIA</h2>
                     <p>{event.judgingCriteria}</p>
 
-                    <button type="button" className="btn btn-warning m-2">Download Rulebook</button>
-                    <button type="button" className="btn btn-warning m-2">Register</button>
+                    <button type="button" className="btn  m-2 button-3">Download Rulebook</button>
+                    <button type="button" className="btn m-2 button-3">Register</button>
                   </div>
                 </div>
               </div>

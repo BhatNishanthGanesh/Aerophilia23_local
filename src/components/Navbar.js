@@ -1,6 +1,8 @@
 import { Outlet, Link } from "react-router-dom";
 import img from "./Aerophilia-logo.png";
 
+import "./Login.css";
+
 const Navbar = () => {
   return (
     <>
@@ -22,42 +24,50 @@ const Navbar = () => {
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
-              <li class="nav-item ">
-                <Link to="/register" class="text-decoration-none p-5">
-                  REGISTER
-                </Link>
-              </li>
-
-              <li class="nav-item">
-                <Link to="/login" class="text-decoration-none p-5">
-                  LOGIN
-                </Link>
-              </li>
-              
-              <li class="nav-item">
+              <li class="nav-item m-3">
                 <Link to="/" class="text-decoration-none p-5">
                   HOME
                 </Link>
               </li>
 
-             
-              <li class="nav-item">
-                <Link to="/" class="text-decoration-none p-5">
-                  NAVBAR
+              <li class="nav-item m-3">
+                <Link to="/events" class="text-decoration-none p-5">
+                  EVENT
                 </Link>
               </li>
 
-              <li class="nav-item">
-                <Link to="/footer" class="text-decoration-none p-5">
+              <li class="nav-item m-3">
+                <Link to="/" class="text-decoration-none p-5">
+                  GALLERY
+                </Link>
+              </li>
+
+              <li class="nav-item m-3">
+                <Link to="/" class="text-decoration-none p-5">
+                  ABOUT US
+                </Link>
+              </li>
+
+              <li class="nav-item m-3">
+                <Link to="/footer" class="text-decoration-none p-5 ">
                   FOOTER
                 </Link>
               </li>
-            
 
-            <li class="nav-item">
-                <Link to="/events" class="text-decoration-none p-5">
-                  EVENT DETAIL
-                </Link>
+              <li class="nav-item">
+                <button type="button" className="btn m-2 button-3 reg-btn">
+                  <Link to="/register" class="text-decoration-none ">
+                    REGISTER
+                  </Link>
+                </button>
+              </li>
+
+              <li class="nav-item">
+                <button type="button" className="btn m-2 button-3 lg-btn">
+                  <Link to="/login" class="text-decoration-none">
+                    LOGIN
+                  </Link>
+                </button>
               </li>
             </ul>
 
