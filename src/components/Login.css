@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Roboto+Mono:wght@100&display=swap");
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: bold;
+}
+
+
+
+
+.frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%; 
+  background-color: #ffffff; 
+}
+
+.frame-content {
+  display: flex;
+  height: 600px;
+  background-color:rgb(0, 0, 0);
+  
+}
+.desc{
+  position: relative;
+  left: -12px;
+  width:30%;
+  height: 100%;
+  background-color:rgba(249,150,51,.982);
+ 
+}
+.title{
+  
+  height: 60px;
+  background-color: rgba(249,150,51,.982);
+  width: 100%;
+}
+.title h2{
+  position: relative;
+  left: 80px;
+  top: 10px;
+}
+.desc img{
+  position: absolute;
+  height: 30%;
+  width: 87%; 
+  left: 6.2%;
+}
+
+.close-flex img{
+  height: 40px;
+  width: 40px;
+  position: relative;
+  left: 34rem;
+  top: 0.3rem;
+}
+.rules{
+  color: white;
+  width: 70%;
+
+}
+.scrollable-rules {
+  max-height: 80vh;
+  overflow: hidden;
+  position: relative; /* Establishes a containing block for absolute positioning */
+  padding-right: 20px; /* Add padding to prevent content from being too close to the edge */
+}
+
+.scrollable-rules .description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -20px; /* Compensate for the hidden scrollbar */
+  overflow-y: auto;
+  max-height: 100%;
+  padding-right: 20px; /* Add padding to prevent content from being too close to the edge */
+}
+
+.close-flex{
+  display: flex;
+}
+
+.details ul{
+position: relative;
+top: 203px;
+font-weight: bold;
+}
+
+.rules h2{
+  font-size: 1.7rem;
+  color: rgba(249,150,51,.982) ;
+  font-weight: bold; 
+  
+}
+
+.btn{
+  background-color: rgba(249,150,51,.982);
+  
+}
+
+.navigate{
+  height: 60vh;
+  background: black;
+  
+}
+
+.links{
+  height: 60vh;
+  background:black;
+}
+
+.reach-us{
+  height: 60vh;
+  background:black;
+}
+
+.card-footer{
+  display:absolute;
+  width:100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  
+}
+.list-group-item{
+  background-color: black;
+  color: white;
+}
+
+.footer-icon{
+    font-size: 24px;
+}
+
+.icons .footer-icon {
+  margin-right: 16px; 
+}
+
+
+.event-icon{
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.copyright{
+  position: relative;
+  bottom: 7vh;
+  color: white;
+}
+
+.card-header {
+  border-bottom: 2px solid #fff; /* You can adjust the color and thickness as needed */
+  text-align: center; /* Optional: Center the underline */
+  margin-bottom: 16px; /* Optional: Add some spacing between the header and underline */
+}
+
+
+
+
+
+
