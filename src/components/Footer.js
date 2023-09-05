@@ -45,7 +45,7 @@ const Footer = () => {
             </div>
           </div>
           <div class="col-md-4 col-sm-12 reach-us">
-            <div class="card  card-footer p-5">
+            <div class="card card-footer p-5">
               <div class="card-header">LINKS</div>
               <ul class="list-group list-group-flush p-3">
                 <li class="list-group-item">Privacy policy</li>
@@ -54,7 +54,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div class="card-text copyright">
+          <div class="card-text copyright"style={{backgroundColor:"black",color:"white"}}>
             <center>
           
               &copy; 2023 Aerophilia. All rights reserved.

@@ -10,10 +10,10 @@ const Register = () => {
           <div class="row">
             <div class="col-md-4 col-sm-12"></div>
             <div class="col my-5">
-              <div class="card">
+              <div class="card p-5 auth-card"style={{backgroundColor:"lightseagreen"}}>
                 <div class="card-body custom-card-body">
                   <center>
-                    <h5 class="card-title mb-5">SIGN UP</h5>
+                    <h5 class="card-title mb-5"style={{color:"white"}}>SIGN UP</h5>
                   </center>
                   <form>
                     <div class="mb-3">
@@ -84,7 +84,7 @@ const Register = () => {
                       Submit
                     </button>
                     <div className="mb-3">
-                      <a href="/" className="text-muted text-decoration-none">
+                      <a href="/login" className="text-muted text-decoration-none">
                         Login?
                       </a>
                     </div>

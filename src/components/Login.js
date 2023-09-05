@@ -12,10 +12,10 @@ const Login = () => {
         <div class="row">
           <div class="col-md-4 col-sm-12"></div>
           <div class="col my-5">
-            <div class="card ">
+            <div class="card p-5 auth-card"style={{backgroundColor:"lightseagreen"}}>
               <div class="card-body custom-card-body">
                 <center>
-                  <h5 class="card-title mb-5">User Login</h5>
+                  <h5 class="card-title mb-5"style={{color:"white"}}>USER LOGIN</h5>
                 </center>
                 <form>
                   <div class="mb-3">
@@ -53,7 +53,7 @@ const Login = () => {
                     Submit
                   </button>
                   <div className="mb-3">
-                    <a href="/" className="text-muted text-decoration-none">
+                    <a href="/register" className="text-muted text-decoration-none"style={{color:"white"}}>
                     New User? Signup
                     </a>
                   </div>

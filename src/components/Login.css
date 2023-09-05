@@ -1,18 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Roboto+Mono:wght@100&display=swap");
+
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 80vh;
+}
+
+.card-title {
+  border-bottom: 5px solid #ffffff; /* You can adjust the color and thickness as needed */
+  text-align: center; /* Optional: Center the underline */
+  padding-bottom: 10px; /* Optional: Add some spacing between the header and underline */
+  font-weight: bolder;
+}
+.auth-card {
+  border-radius: 34px;
 }
 
 body {
   font-family: "Chakra Petch", sans-serif;
   font-weight: bold;
-  overflow-y: hidden;
 }
 
 .navbar {
   height: 4.5rem;
+  /* background:  linear-gradient(to right, #bdc3c7, #2c3e50);; */
+  background-color: lightseagreen;
+  z-index: 1000;
 }
 
 .frame {
@@ -26,6 +40,7 @@ body {
 .frame-content {
   display: flex;
   height: 600px;
+  flex-wrap: wrap;
   background-color: rgb(0, 0, 0);
 }
 .desc {
@@ -33,11 +48,11 @@ body {
   left: -12px;
   width: 30%;
   height: 100%;
-  background-color: rgba(249, 150, 51, 0.982);
+  background-color: lightseagreen;
 }
 .title {
   height: 60px;
-  background-color: rgba(249, 150, 51, 0.982);
+  background-color: lightseagreen;
   width: 100%;
 }
 .title h2 {
@@ -92,26 +107,46 @@ body {
 
 .rules h2 {
   font-size: 1.7rem;
-  color: rgba(249, 150, 51, 0.982);
+  color: lightseagreen;
   font-weight: bold;
 }
 
 .btn {
   background-color: rgba(249, 150, 51, 0.982);
 }
+.container-fluid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-.navigate {
-  height: 60vh;
+.navigate,
+.links,
+.reach-us {
+  flex: 1;
+  background: black;
+  color: white;
+  padding: 20px; /* Adjust the padding as needed */
+}
+
+.card-footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+/* .navigate {
+  height: 100%;
   background: black;
 }
 
 .links {
-  height: 60vh;
+  height: 100%;
   background: black;
 }
 
 .reach-us {
-  height: 60vh;
+  height: 100%;
   background: black;
 }
 
@@ -121,7 +156,7 @@ body {
   height: 100%;
   background-color: black;
   color: white;
-}
+} */
 .list-group-item {
   background-color: black;
   color: white;
@@ -140,11 +175,11 @@ body {
   margin-bottom: 8px;
 }
 
-.copyright {
+/* .copyright {
   position: relative;
   bottom: 7vh;
   color: white;
-}
+} */
 
 .card-header {
   border-bottom: 2px solid #fff; /* You can adjust the color and thickness as needed */
@@ -156,7 +191,7 @@ body {
   padding: 0.6em 2em;
   border: none;
   outline: none;
-  color: rgb(255, 255, 255);
+  color: lightseagreen;
   background: #111;
   cursor: pointer;
   position: relative;
@@ -169,7 +204,7 @@ body {
 
 .button-3:before {
   content: "";
-  background: linear-gradient(
+  /* background: linear-gradient(
     45deg,
     #ff0000,
     #ff7300,
@@ -180,7 +215,8 @@ body {
     #7a00ff,
     #ff00c8,
     #ff0000
-  );
+  ); */
+  background-color: lightseagreen;
   position: absolute;
   top: -2px;
   left: -2px;
@@ -218,3 +254,153 @@ body {
   top: 0;
   border-radius: 10px;
 }
+
+.button-3 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: lightseagreen;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-3:before {
+  content: "";
+  /* background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  ); */
+  background-color: lightseagreen;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-3 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-3 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-3:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.button-4 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgba(249, 150, 51, 0.982);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-4:before {
+  content: "";
+  /* background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  ); */
+  background-color: rgba(249, 150, 51, 0.982);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-3 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-3 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-4:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .small-screen {
+    background-color: lightseagreen; /* Set your desired background color */
+
+    padding: 10px; /* Adjust padding as needed */
+   
+    margin: 5px; /* Adjust margin as needed */
+  }
+  .nav-item {
+    border-bottom: 2px solid black;
+  }
+}
+
