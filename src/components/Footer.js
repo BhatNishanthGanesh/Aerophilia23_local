@@ -1,5 +1,6 @@
 import "./Login.css";
 import img from "./Aerophilia-logo.png";
+import logo from "./logo.png"
 import { FaInstagram } from "react-icons/fa";
 import { FiYoutube } from "react-icons/fi";
 import { FiMail } from "react-icons/fi";
@@ -18,7 +19,7 @@ const Footer = () => {
               style={{ backgroundColor: "black", color: "white" }}
             >
               <div class="card-header">REACH US</div>
-              <img src={img} class="card-img-top " alt="..."></img>
+              <img src={logo} class="card-img-top " alt="..."></img>
               <div class="card-body">
                 <p class="card-text">
                   Sahyadri College of Engineering and Management Mangaluru,

@@ -20,6 +20,7 @@
 body {
   font-family: "Chakra Petch", sans-serif;
   font-weight: bold;
+  /* background-color: #454545; */
 }
 
 .navbar {
@@ -94,7 +95,13 @@ body {
   max-height: 100%;
   padding-right: 20px; /* Add padding to prevent content from being too close to the edge */
 }
+.show {
+  display: flex
+}
 
+.hide {
+  display: none;
+}
 .close-flex {
   display: flex;
 }
@@ -135,28 +142,7 @@ body {
   color: white;
 }
 
-/* .navigate {
-  height: 100%;
-  background: black;
-}
 
-.links {
-  height: 100%;
-  background: black;
-}
-
-.reach-us {
-  height: 100%;
-  background: black;
-}
-
-.card-footer {
-  display: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  color: white;
-} */
 .list-group-item {
   background-color: black;
   color: white;
@@ -175,11 +161,6 @@ body {
   margin-bottom: 8px;
 }
 
-/* .copyright {
-  position: relative;
-  bottom: 7vh;
-  color: white;
-} */
 
 .card-header {
   border-bottom: 2px solid #fff; /* You can adjust the color and thickness as needed */
@@ -204,7 +185,7 @@ body {
 
 .button-3:before {
   content: "";
-  /* background: linear-gradient(
+  background: linear-gradient(
     45deg,
     #ff0000,
     #ff7300,
@@ -215,8 +196,8 @@ body {
     #7a00ff,
     #ff00c8,
     #ff0000
-  ); */
-  background-color: lightseagreen;
+  );
+
   position: absolute;
   top: -2px;
   left: -2px;
@@ -249,158 +230,31 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #222;
+  background:black;
   left: 0;
   top: 0;
   border-radius: 10px;
 }
 
-.button-3 {
-  padding: 0.6em 2em;
-  border: none;
-  outline: none;
-  color: lightseagreen;
-  background: #111;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
 
-.button-3:before {
-  content: "";
-  /* background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  ); */
-  background-color: lightseagreen;
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing-button-3 20s linear infinite;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
-}
-
-@keyframes glowing-button-3 {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-.button-3:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #222;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-}
-
-.button-4 {
-  padding: 0.6em 2em;
-  border: none;
-  outline: none;
-  color: rgba(249, 150, 51, 0.982);
-  background: #111;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-4:before {
-  content: "";
-  /* background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  ); */
-  background-color: rgba(249, 150, 51, 0.982);
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing-button-3 20s linear infinite;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
-}
-
-@keyframes glowing-button-3 {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-.button-4:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #222;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-}
-
-@media (max-width: 600px) {
+@media (max-width: 980px) {
   .small-screen {
-    background-color: lightseagreen; /* Set your desired background color */
-
-    padding: 10px; /* Adjust padding as needed */
-   
-    margin: 5px; /* Adjust margin as needed */
+    background-color: lightseagreen;
+    padding: 10px;
+    margin: 4px;
+    width: 50%;
+    position: absolute;
+    top: 10vh;
+    border-radius: 24px;
   }
   .nav-item {
     border-bottom: 2px solid black;
   }
 }
 
+@media (max-width:600px){
+  .frame-content{
+    display: block;
+    
+  }
+}
