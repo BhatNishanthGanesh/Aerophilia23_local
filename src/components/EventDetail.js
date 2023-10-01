@@ -1,9 +1,7 @@
 import "./Login.css";
 import skydive from "./SkyDive.webp";
 import Navbar from "./Navbar";
-
 import React, { useState } from "react";
-
 import Icon_close from "./Icon_close.svg.png";
 import { BsFillPersonFill } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io";

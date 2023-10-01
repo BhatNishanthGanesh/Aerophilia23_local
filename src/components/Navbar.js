@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Login.css";
 import logo from "./logo.png";
 
@@ -27,7 +27,7 @@ const Navbar = () => {
                 <Link
                   to="/"
                   class="text-decoration-none p-3"
-                  style={{ color: "black" }}
+                  style={{ color: "white" }}
                 >
                   HOME
                 </Link>
@@ -37,7 +37,7 @@ const Navbar = () => {
                 <Link
                   to="/events"
                   class="text-decoration-none p-3"
-                  style={{ color: "black" }}
+                  style={{ color: "white" }}
                 >
                   EVENT
                 </Link>
@@ -47,7 +47,7 @@ const Navbar = () => {
                 <Link
                   to="/"
                   class="text-decoration-none p-3"
-                  style={{ color: "black" }}
+                  style={{ color: "white" }}
                 >
                   GALLERY
                 </Link>
@@ -57,7 +57,7 @@ const Navbar = () => {
                 <Link
                   to="/"
                   class="text-decoration-none p-3"
-                  style={{ color: "black" }}
+                  style={{ color: "white" }}
                 >
                   ABOUT US
                 </Link>
@@ -67,7 +67,7 @@ const Navbar = () => {
                 <Link
                   to="/footer"
                   class="text-decoration-none p-3 m-2"
-                  style={{ color: "black" }}
+                  style={{ color: "white" }}
                 >
                   FOOTER
                 </Link>

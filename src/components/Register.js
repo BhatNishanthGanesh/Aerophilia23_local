@@ -10,7 +10,7 @@ const Register = () => {
           <div class="row">
             <div class="col-md-4 col-sm-12"></div>
             <div class="col my-5">
-              <div class="card p-5 auth-card"style={{backgroundColor:"lightseagreen"}}>
+              <div class="card p-4 mb-5 auth-card"style={{backgroundColor:"lightseagreen"}}>
                 <div class="card-body custom-card-body">
                   <center>
                     <h5 class="card-title mb-5"style={{color:"white"}}>SIGN UP</h5>

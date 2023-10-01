@@ -8,30 +8,30 @@
 }
 
 .card-title {
-  border-bottom: 5px solid #ffffff; /* You can adjust the color and thickness as needed */
-  text-align: center; /* Optional: Center the underline */
-  padding-bottom: 10px; /* Optional: Add some spacing between the header and underline */
+  border-bottom: 5px solid #ffffff; 
+  text-align: center; 
+  padding-bottom: 10px;
   font-weight: bolder;
 }
 .auth-card {
   border-radius: 34px;
+  
 }
 
 body {
   font-family: "Chakra Petch", sans-serif;
   font-weight: bold;
-  /* background-color: #454545; */
+  overflow: hidden;
 }
 
 .navbar {
   height: 4.5rem;
-  /* background:  linear-gradient(to right, #bdc3c7, #2c3e50);; */
   background-color: lightseagreen;
   z-index: 1000;
 }
 
 .frame {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   min-height: 100%;
@@ -82,18 +82,18 @@ body {
 .scrollable-rules {
   max-height: 80vh;
   overflow: hidden;
-  position: relative; /* Establishes a containing block for absolute positioning */
-  padding-right: 20px; /* Add padding to prevent content from being too close to the edge */
+  position: relative; 
+  padding-right: 20px;
 }
 
 .scrollable-rules .description {
   position: absolute;
   top: 0;
   left: 0;
-  right: -20px; /* Compensate for the hidden scrollbar */
+  right: -20px; 
   overflow-y: auto;
   max-height: 100%;
-  padding-right: 20px; /* Add padding to prevent content from being too close to the edge */
+  padding-right: 20px; 
 }
 .show {
   display: flex
@@ -133,7 +133,7 @@ body {
   flex: 1;
   background: black;
   color: white;
-  padding: 20px; /* Adjust the padding as needed */
+  padding: 20px; 
 }
 
 .card-footer {
@@ -163,9 +163,9 @@ body {
 
 
 .card-header {
-  border-bottom: 2px solid #fff; /* You can adjust the color and thickness as needed */
-  text-align: center; /* Optional: Center the underline */
-  margin-bottom: 16px; /* Optional: Add some spacing between the header and underline */
+  border-bottom: 2px solid #fff;
+  text-align: center; 
+  margin-bottom: 16px; 
 }
 
 .button-3 {
