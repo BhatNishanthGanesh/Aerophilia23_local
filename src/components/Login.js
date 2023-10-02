@@ -1,7 +1,24 @@
+import { useState } from "react";
 import "./Login.css";
 import Navbar from "./Navbar";
+import { auth } from "./firebaseAuth/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = () => {
+  const [email, setEmail]=useState('')
+  const [password, setPassword]=useState('')
+
+  const handleSubmit = (e)=>{
+    e.preventDefault()
+    signInWithEmailAndPassword(auth,email,password)
+    .then((userCredentials)=>{
+      console.log(userCredentials)
+    }).catch((error)=>{
+      console.log(error)
+    })
+    
+  }
+
   return (
     <div>
       <Navbar />
@@ -33,6 +50,8 @@ const Login = () => {
                         id="exampleInputEmail1"
                         placeholder="Enter Email"
                         aria-describedby="emailHelp"
+                        value={email}
+                        onChange={(e)=>{setEmail(e.target.value)}}
                       ></input>
                     </div>
                     <div class="mb-3">
@@ -45,6 +64,8 @@ const Login = () => {
                         class="form-control"
                         id="exampleInputPassword1"
                         placeholder="Password"
+                        value={password}
+                        onChange={(e)=>{setPassword(e.target.value)}}
                       ></input>
                     </div>
                     <div className="mb-3">
@@ -54,7 +75,7 @@ const Login = () => {
                     </div>
                   </form>
                   <div className="mb-3 d-flex align-items-center justify-content-between">
-                    <button type="button" className="btn m-2 button-3">
+                    <button type="button" className="btn m-2 button-3" onClick={handleSubmit}>
                       Submit
                     </button>
                     <div className="mb-3">
