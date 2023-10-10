@@ -21,10 +21,10 @@
     font-weight: bold;
   }
   
-  .btn {
-    background-color: rgb(255, 204, 2);
-  }
-  .container-fluid {
+  /* .btn {
+    background-color: rgb(255, 2, 40);
+  } */
+  .container-fluid-custom {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -67,7 +67,7 @@
     margin-bottom: 8px;
   }
   
-  .card-header {
+  .card-header-custom {
     border-bottom: 2px solid #fff;
     text-align: center; 
     margin-bottom: 16px; 

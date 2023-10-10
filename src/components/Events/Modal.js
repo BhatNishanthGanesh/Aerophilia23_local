@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsCalendar2DateFill } from "react-icons/bs";
 import { AiFillTrophy } from "react-icons/ai";
@@ -26,6 +26,8 @@ const Modal = ({ data, closeModal }) => {
     const [drop, setDrop] = useState(false);
     const [visible, setVisible] = useState(true);
     const [count, setCount] = useState(1);
+    const [paymentSuccess, setPaymentSuccess] = useState(false);
+  
     const [team, setTeam] = useState({
       "Member 1": "",
     });
@@ -64,20 +66,87 @@ const Modal = ({ data, closeModal }) => {
       }
     }
 
+  function loadScript(src) {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = src;
+      script.onload = () => {
+        resolve(true);
+      };
+      script.onerror = () => {
+        resolve(false);
+      };
+      document.body.appendChild(script);
+    });
+  }
+  const bottomRef = useRef();
+  useEffect(() => {
+    // bottomRef.current.scrollIntoView({ behavior: "smooth" });
+    console.log("hi");
+  }, [drop]);
+  async function displayRazorpay(order) {
+    const res = await loadScript(
+      "https://checkout.razorpay.com/v1/checkout.js"
+    );
+
+    if (!res) {
+      alert("Razorpay SDK failed to load. Are you online?");
+      return;
+    }
+
+    // creating a new order
+
+    // Getting the order details back
+
+    const options = {
+      key: "rzp_live_BrLSTb0WYj6jhq", // Enter the Key ID generated from the Dashboard
+      amount: order.amount.toString(),
+      currency: "INR",
+      name: "Aerophilia 2022",
+      description: " ",
+      image: " ",
+      order_id: order.id,
+      handler: async function(response) {
+        const data = {
+          //data?
+          orderCreationId: order.id,
+          ...response,
+          userId: userid,
+        };
+
+        // const result = await axios.post("http://localhost:5000/payment/success", data);
+
+        // alert(result.data.msg);
+        axios
+          .post(`http://localhost:3000/api/payment/verify`, data)
+          .then((result) => {
+            if (result.data.signatureIsValid === "true") handleUserWhilePay();
+            setPaymentSuccess(true);
+          });
+      },
+      theme: {
+        color: "#61dafb",
+      },
+    };
+
+    const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
+  }
 
     const handleRegister = async () => {
         if (!currentUser) {
           navigate("/login");
         } else {
           if (data.subtype == "solo") {
-            let order = await axios.post(
-              `http://localhost:3000/api/create/orderid`,
-              {
+            try {
+              let order = await axios.post(`http://localhost:3000/api/create/orderid`, {
                 name: data.name,
-              }
-            );
-    
-           
+              });
+              displayRazorpay(order.data);
+            } catch (error) {
+              console.error("Error creating order:", error);
+            }
+            
           } else {
             setDrop(true);
             setVisible(false);
@@ -106,6 +175,15 @@ const Modal = ({ data, closeModal }) => {
           setTeam(newTeam);
           setCount(count - 1);
         }
+      };
+
+      const proceedPay = async (e) => {
+        e.preventDefault();
+        let order = await axios.post(`http://localhost:3000/api/create/orderid`, {
+          name: data.name,
+        });
+    
+        displayRazorpay(order.data);
       };
 
   return (
@@ -299,7 +377,7 @@ const Modal = ({ data, closeModal }) => {
                       <button
                         className="button-62"
                         id="rzp-button1"
-                        onClick={handleUserWhilePay}
+                        onClick={(e) => proceedPay(e)}
                        
                       >
                         Proceed to Pay
@@ -307,7 +385,7 @@ const Modal = ({ data, closeModal }) => {
                       {console.log(count)}
                     </div>
                   </div>
-                
+                  <div ref={bottomRef}></div>
                 </React.Fragment>
               )}
             </div>

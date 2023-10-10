@@ -5,20 +5,19 @@ import { FaInstagram } from "react-icons/fa";
 import { FiYoutube } from "react-icons/fi";
 import { FiMail } from "react-icons/fi";
 import { FiPhoneCall } from "react-icons/fi";
-import Navbar from "../Navbar/Navbar";
+
 
 const Footer = () => {
   return (
     <>
-      <Navbar />
-      <div className="container-fluid">
+      <div className="container-fluid container-fluid-custom">
         <div className="row">
           <div className="col-md-4 col-sm-12 navigate">
             <div
               className="card card-footer p-5"
               style={{ backgroundColor: "black", color: "white" }}
             >
-              <div className="card-header">REACH US</div>
+              <div className="card-header card-header-custom">REACH US</div>
               <img src={logo} className="card-img-top " alt="..."></img>
               <div className="card-body">
                 <p className="card-text">
@@ -44,7 +43,7 @@ const Footer = () => {
           </div>
           <div className="col-md-4 col-sm-12 links">
             <div className="card card-footer p-5">
-              <div className="card-header">NAVIGATE</div>
+              <div className="card-header card-header-custom">NAVIGATE</div>
               <ul className="list-group list-group-flush p-3">
                 <li className="list-group-item">Home</li>
                 <li className="list-group-item">Events</li>
@@ -55,7 +54,7 @@ const Footer = () => {
           </div>
           <div className="col-md-4 col-sm-12 reach-us">
             <div className="card card-footer p-5">
-              <div className="card-header">LINKS</div>
+              <div className="card-header card-header-custom">LINKS</div>
               <ul className="list-group list-group-flush p-3">
                 <li className="list-group-item">Privacy policy</li>
                 <li className="list-group-item">Refund and cancellation policy</li>

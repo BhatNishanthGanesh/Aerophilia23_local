@@ -172,15 +172,15 @@ const Register = () => {
     <>
       <Navbar />
       emailExists
-      <div className="login-container">
+      <div className="login-container login-container-custom">
         <div className="container">
           <div className="row">
             <div className="col-md-4 col-sm-12"></div>
             <div className="col my-5">
-              <div className="card p-4 mb-5 mt-5 auth-card button-3">
+              <div className="card p-4 mb-5 mt-5 auth-card auth-card-custom button-3">
                 <div className="card-body custom-card-body">
                   <center>
-                    <h5 className="card-title mb-5" style={{ color: "white" }}>
+                    <h5 className="card-title card-title-custom mb-5" style={{ color: "white" }}>
                       SIGN UP
                     </h5>
                   </center>

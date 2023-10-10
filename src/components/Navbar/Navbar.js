@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-// import "./Login.css";
-import "./Navbar.css"
+import "./Navbar.css";
 import logo from "../../images/logo.png";
 import { useAuth } from "../firebaseAuth/authContext";
 import { signOut } from "firebase/auth";
@@ -12,9 +11,9 @@ const Navbar = () => {
   const navigate = useNavigate();
   return (
     <>
-      <nav className="navbar nav navbar-expand-lg button-3">
+      <nav className="navbar navbar-custom nav navbar-expand-lg  fixed-top">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand navbar-brand-custom" href="#">
             <img src={logo} alt="Logo" className="logo"></img>
           </a>
           <button
@@ -26,10 +25,10 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon navbar-toggler-icon-custom"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-auto small-screen">
+            <ul className="navbar-nav navbar-nav-custom  me-auto mb-2 mb-lg-0 ms-auto small-screen">
               <li className="nav-item m-3">
                 <Link
                   to="/"
@@ -41,33 +40,23 @@ const Navbar = () => {
               </li>
               <li className="nav-item m-3">
                 <Link
-                  to="/events"
-                  className="text-decoration-none p-3"
-                  style={{ color: "white" }}
-                >
-                  EVENT
-                </Link>
-              </li>
-              <li className="nav-item m-3">
-                <Link
                   to="/courses"
                   className="text-decoration-none p-3"
                   style={{ color: "white" }}
                 >
-                  COURSES
+                  EVENTS
                 </Link>
               </li>
-
               <li className="nav-item m-3">
                 <Link
-                  to="/"
+                  to="/gallery"
                   className="text-decoration-none p-3"
                   style={{ color: "white" }}
                 >
                   GALLERY
                 </Link>
               </li>
-              <li className="nav-item m-3">
+              <li className="nav-item nav-item-custom m-3">
                 <Link
                   to="/"
                   className="text-decoration-none p-3"
@@ -76,26 +65,9 @@ const Navbar = () => {
                   ABOUT US
                 </Link>
               </li>
-              <li className="nav-item m-3">
-                <Link
-                  to="/footer"
-                  className="text-decoration-none p-3 m-2"
-                  style={{ color: "white" }}
-                >
-                  FOOTER
-                </Link>
-              </li>{" "}
-              <li className="nav-item m-3">
-                <Link
-                  to="/forgot"
-                  className="text-decoration-none p-3 m-2"
-                  style={{ color: "white" }}
-                >
-                  FORGOT
-                </Link>
-              </li>
+             
               {currentUser ? (
-                <li className="nav-item">
+                <li className="nav-item nav-item-custom">
                   <button
                     type="button"
                     className="btn m-2 button-3 reg-btn"

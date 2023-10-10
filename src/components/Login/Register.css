@@ -1,4 +1,4 @@
-.login-container {
+.login-container-custom {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,13 +11,13 @@
     width: 16rem;
 }
 
-.card-title {
+.card-title-custom {
   border-bottom: 5px solid #ffffff; 
   text-align: center; 
   padding-bottom: 10px;
   font-weight: bolder;
 }
-.auth-card {
+.auth-card-custom {
   border-radius: 34px;
   opacity: 1.5;
   margin-top: -18px; 
@@ -68,7 +68,7 @@ body {
     background-position: 0 0;
   }
   50% {
-    background-position: 900% 0; /* Adjust the background position */
+    background-position: 900% 0; 
   }
   100% {
     background-position: 0 0;

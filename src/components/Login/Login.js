@@ -35,18 +35,18 @@ const Login = () => {
     <div>
       <Navbar />
 
-      <div className="login-container">
+      <div className="login-container login-container-custom">
         <div className="container">
           <div className="row">
             <div className="col-md-4 col-sm-12"></div>
             <div className="col my-5">
               <div
-                className="card p-5 auth-card button-3"
+                className="card p-5 auth-card auth-card-custom button-3"
                 style={{ backgroundColor: "lightseagreen" }}
               >
                 <div className="card-body custom-card-body">
                   <center>
-                    <h5 className="card-title mb-5" style={{ color: "white" }}>
+                    <h5 className="card-title card-title-custom mb-5" style={{ color: "white" }}>
                       USER LOGIN
                     </h5>
                   </center>
